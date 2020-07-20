@@ -34,7 +34,7 @@ console.log(isCool);
 console.log(homies);
 console.log(tesla);
 console.log(tesla.vehicles.vehicleThree);
-console.log(tesla["vehicles"]["vehiclesThree"]);
+console.log(tesla["vehicles"]["vehicleThree"]);
 
 tesla.print();
 
@@ -51,3 +51,28 @@ const chess = {
 };
 
 chess.print();
+
+// function
+
+function printHomies(array) {
+  array.forEach((homie) => {
+    console.log(homie);
+  });
+}
+
+printHomies(homies);
+
+// standard function
+function addNumbers(num1, num2) {
+  return num1 + num2;
+}
+
+// function expression
+const multiplyNumbers = function (num1, num2) {
+  return num1 * num2;
+};
+
+// arrow function
+const subtractNumbers = (num1, num2) => {
+  return num1 - num2;
+};
