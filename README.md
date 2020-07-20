@@ -46,3 +46,25 @@ const subtractNumbers = (num1, num2) => {
   return num1 - num2;
 };
 ```
+
+## DOM Manipulation
+
+```javascript
+// DOM
+
+const container = document.querySelector(".container");
+console.log(container);
+
+const headerTwo = document.createElement("h2");
+headerTwo.textContent = "My First JS Review";
+
+container.appendChild(headerTwo);
+
+//add a class to headerTwo
+headerTwo.classList.add("subtitle");
+//headerTwo.setAttribute("class", "header-two");
+
+// remove class from headerTwo
+headerTwo.classList.remove("header-two");
+console.log(headerTwo);
+```
