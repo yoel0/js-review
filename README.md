@@ -68,3 +68,27 @@ headerTwo.classList.add("subtitle");
 headerTwo.classList.remove("header-two");
 console.log(headerTwo);
 ```
+
+### More DOM Manipulation
+
+```javascript
+const list = document.createElement("ul");
+
+// iterate through my homies array
+for (let i = 0; i < homies.length; i++) {
+  let eachHomie = homies[i];
+  // create an element
+  const listItem = document.createElement("li");
+  // added text to that element
+  listItem.textContent = eachHomie;
+
+  // append item to list
+  list.appendChild(listItem);
+}
+
+console.log(list);
+// listening for a click
+headerThree.addEventListener("click", function () {
+  container.appendChild(list);
+});
+```

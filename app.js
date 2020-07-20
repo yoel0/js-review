@@ -94,3 +94,45 @@ headerTwo.classList.add("subtitle");
 // remove class from headerTwo
 headerTwo.classList.remove("header-two");
 console.log(headerTwo);
+
+headerTwo.addEventListener("click", function () {
+  headerTwo.textContent = "Yoel";
+});
+
+// make another element
+const headerThree = document.createElement("h2");
+headerThree.textContent = "Homies";
+
+container.appendChild(headerThree);
+console.log(headerThree);
+
+const list = document.createElement("ul");
+
+// iterate through my homies array
+for (let i = 0; i < homies.length; i++) {
+  let eachHomie = homies[i];
+
+  const listItem = document.createElement("li");
+  listItem.textContent = eachHomie;
+
+  list.appendChild(listItem);
+}
+
+console.log(list);
+headerThree.addEventListener("click", function () {
+  container.appendChild(list);
+});
+// refrence each homie
+// create a li
+// add text content to that li
+// append that to a ul (unordered list)
+// unordered list
+// homies
+// - homie 1
+// - homie 2
+// - homie 3
+// ordered list
+// homies
+// 1. homie 1
+// 2. homie 2
+// 3. homie 3
