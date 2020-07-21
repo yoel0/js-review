@@ -120,6 +120,37 @@ console.log(everyOtherWord("This should work I think"));
 // let words = "Go to the store and grab the following: milk, bread, run, and cake";
 // wordYeller(words) === "Go! to! the! store! and! grab! the! following: milk, bread, run, and! cake!"; // => true
 
+function wordYeller(sentence) {
+  let splitSentence = sentence.split(" ");
+
+  let newLoudSentenceArray = [];
+
+  splitSentence.forEach(function (word) {
+    let lengthOfWord = word.length - 1;
+
+    let lastCharInWord = word[lengthOfWord];
+
+    if (
+      lastCharInWord === "!" ||
+      lastCharInWord === "," ||
+      lastCharInWord === "." ||
+      lastCharInWord === "?"
+    ) {
+      newLoudSentenceArray.push(word);
+    } else {
+      let loudWord = word + "!";
+
+      newLoudSentenceArray.push(loudWord);
+    }
+  });
+
+  let newLoundSentence = newLoudSentenceArray.join(" ");
+
+  return newLoundSentence;
+}
+
+console.log(wordYeller("This, is? a string! you. think pal"));
+
 //arraySubstring
 
 // Write a function `arraySubstring(words, str)` that takes in an array of
