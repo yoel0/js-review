@@ -165,6 +165,19 @@ console.log(wordYeller("This, is? a string! you. think pal"));
 // arraySubstring(["prefix", "problems", "pragmatic", "prefer"], "pre")
 // => [true, false, false, true]
 
+function arraySubstring(words, str) {
+  let subStringArray = [];
+  words.forEach((element) => {
+    let subStringFound = element.includes(str);
+
+    subStringArray.push(subStringFound);
+  });
+
+  return subStringArray;
+}
+
+console.log(arraySubstring(["Words", "in", "pgraan", "array"], "an"));
+
 //evenCaps
 
 // Write a function evenCaps(sentence) that takes in a sentence as an
@@ -177,3 +190,23 @@ console.log(wordYeller("This, is? a string! you. think pal"));
 // => "ToM GoT A SmAlL PiEcE Of pIe"
 // evenCaps("the book is in front of the table")
 // => "ThE BoOk iS In fRoNt oF ThE TaBlE"
+
+function evenCaps(sentence) {
+  let splitSentence = sentence.split("");
+
+  let everyOtherWordArray = [];
+
+  for (let i = 0; i < splitSentence.length; i++) {
+    if (!(i % 2)) {
+      everyOtherWordArray.push(splitSentence[i].toUpperCase());
+    } else {
+      everyOtherWordArray.push(splitSentence[i]);
+    }
+  }
+
+  let everyOtherWordArrayJoined = everyOtherWordArray.join("");
+
+  return everyOtherWordArrayJoined;
+}
+
+console.log(evenCaps("This sentence should look like that spongebob meme"));
