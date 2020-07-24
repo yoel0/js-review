@@ -92,3 +92,44 @@ headerThree.addEventListener("click", function () {
   container.appendChild(list);
 });
 ```
+
+### HTML5 Review
+
+```html
+<!-- using the . extension we can append classes to any HTML tag div.container would create the class container automatically to your div-->
+<div class="container"></div>
+<!-- using the # extension we can append ids to any HTML tag div#special would create the id special automatically to your div-->
+<div id="special"></div>
+<!-- this is important when using CSS to style our page because page structure has
+huge impact on how we can begin to style our page-->
+```
+
+### CSS3 Review
+
+```css
+/* 
+Using the * symbol above your css style sheet will apply global rules to your whole page that will override any other rule an ezample of using this can be resetting the pages margin and padding to 0 so that you can style each element specifically without worrying about preset margins or paddings like so:
+*/
+
+* {
+  margin: 0;
+  padding: 0;
+}
+```
+
+### JS Promise Review
+
+```javascript
+// The promise takes one argument, a callback with two parameters, resolve and reject. Do something within the callback. ie: async, then call resolve if everything works, otherwise call reject.
+
+let promise = new Promise(function(resolve, reject) {
+  // do something / async, then…
+
+  if (/* everything worked */) {
+    resolve("This worked!");
+  }
+  else {
+    reject(Error("We broke baby.."));
+  }
+});
+```

@@ -30,7 +30,7 @@ function reverseStr(str) {
   return str.split("").reverse().join("");
 }
 
-console.log(reverseStr("General Assembly"));
+console.log(reverseStr("Peach Cream"));
 
 //luckySevens
 
